@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+    #overlay, .overlay {
+        position: absolute;
+        }
+
+    .face{
+        margin: 10px;;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+
+<body>
+        <video id="video" width="320" height="240" autoplay></video>
+        <button id="click-photo">Click Photo</button>
+        <canvas id="canvas" width="320" height="240" hidden></canvas>
+    <div class="face">
+        <img src="./Img/PraveenSankhla.jpg" id="originalImg" style="width: 40%; height: 40%;"/>
+        <canvas id="reflay" class="overlay"></canvas>
+    </div>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/face-api.js"></script>
+    <script src="js/faceSystem.js"></script>
+</body>
+</html>
